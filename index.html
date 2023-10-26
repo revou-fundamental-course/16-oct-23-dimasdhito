@@ -1,139 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Page</title>
-<link rel="stylesheet" href="./css/style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/304670f532.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Netflix</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="nav-logo">
-            <img src="./assets/revou.jpeg" alt="revou-logo">
+    <header class="showcase">
+        <div class="showcase-top">
+            <img src="assets/logo.png" alt="Netlix">
+            <a href="" class="btn btn-rounded">Sign In</a>
         </div>
-        <nav class="nav" id="navbar">
-            <a style="text-decoration:none;" href="#home">
-                <div class="nav-item">Home</div>
+        <div class="showcase-content">
+            <h1>See What's Next</h1>
+            <p>Watch anywhere, Cancel Anytime</p>
+            <a href="#" class="btn btn-xl">
+                Watch Free For 30 Days <i class="fas fa-chevron-right btn-icon"></i>
             </a>
-            <a style="text-decoration:none;" href="#about">
-                <div class="nav-item">Our Profile</div>
-            </a>
-            <a style="text-decoration:none;" href="#porto">
-                <div class="nav-item">Portofolio</div>
-            </a>
-            <a style="text-decoration:none;" href="#form">
-                <div class="nav-item">Message Us</div>
-            </a>
-        </nav>
+        </div>
     </header>
-    <section id="home" class="banner">
-        <div class="greetings">
-            <h1 id="greeting">Hi, Welcome to the website</h1>
-            <h3>Ini adalah latihan website pertama</h3>
-        </div>
-    </section>
-    <section id="about" class="about">
-        <div class="about-content">
-            <h1>About RevoU</h1>
-            <p>Join Indonesia’s Largest Live Online Learning Community with RevoU
-                Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry.
-                100% Live Online Classes, Career Mentors, and Lifelong Community support to unlock endless
-                opportunities.
-                550,000+ Peers to network and learn with, 400+ Industry mentors to inspire you, 2500+
-                Companies our alumni work at, 93% Program completion rate (highest in the industry), 100%
-                Live classes learning experience.
-            </p>
-        </div>
-        <img src="./assets/modern-woman-copyspace_23-2148131686.avif" alt="girl-photo">
-    </section>
-    <section class="headquarters">
-        <h1>Our Head Quarters</h1>
-        <h3>We have several headquarters across Java and more to come.</h3>
-        <div class="hq-items">
-            <div class="hq-item">
-                <div class="circle-jkt"></div>
-                <p>Jakarta</p>
-            </div>
-            <div class="hq-item">
-                <div class="circle-bdg"></div>
-                <p>Bandung</p>
-            </div>
-            <div class="hq-item">
-                <div class="circle-sby"></div>
-                <p>Surabaya</p>
-            </div>
-        </div>
-    </section>
-    <section id="porto" class="portfolio">
-        <h1>Our Portfolio</h1>
-        <h3>Below you can find our beautiful past works</h3>
-        <div class="porto-items">
-            <div class="porto-item">
-                <div class="project1"></div>
-                <h3> Netflix Landing Page</h3>
-                <p>A clone of the widely used Netflix Page</p>
-            </div>
-            <div class="porto-item">
-                <div class="project2"></div>
-                <h3>Personal Project Portfolio</h3>
-                <p>A Personal portfolio website that can be used to showcase all works</p>
-            </div>
-        </div>
-    </section>
-    <section id="form" class="form">
-        <h1>Message Us</h1>
+
+    <section class="tabs">
         <div class="container">
-            <div class="form-input">
-                <div class="row">
-                    <div class="col-label">
-                        <label for="fname">Nama</label>
-                    </div>
-                    <div class="col-input">
-                        <input type="text" id="fname" name="firstname" placeholder="Tuliskan Nama Lengkap Anda...">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-label">
-                        <label for="country">Tanggal Lahir</label>
-                    </div>
-                    <div class="col-input">
-                        <input type="date" id="tanggal-lahir" placeholder="Masukkan Tanggal Lahir Anda...">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-label">
-                        <label for="subject">Jenis Kelamin</label>
-                    </div>
-                    <div class="col-input">
-                        <select id="jenis-kelamin" name="jenis-kelamin">
-                            <option value="Laki-laki">Laki-laki</option>
-                            <option value="Perempuan">Perempuan</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-label">
-                        <label for="subject">Pesan</label>
-                    </div>
-                    <div class="col-input">
-                        <textarea name="Pesan" id="Pesan" cols="30" rows="10" placeholder="Pesan"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <input type="submit" id="submit" value="Submit">
-                </div>
+            <div id="tab-1" class="tab-item tab-border">
+                <i class="fas fa-door-open fa-3x"></i>
+                <p class="hide-sm">Cancel anytime</p>
             </div>
-            <div class="form-output">
-                <textarea name="Output" id="form-output" cols="30" rows="7" disabled></textarea>
+            <div id="tab-2" class="tab-item">
+                <i class="fas fa-tablet-alt fa-3x"></i>
+                <p class="hide-sm">Watch anywhere</p>
+            </div>
+            <div id="tab-3" class="tab-item">
+                <i class="fas fa-tags fa-3x"></i>
+                <p class="hide-sm">Pick your price</p>
             </div>
         </div>
     </section>
+
+    <section class="tab-content">
+        <div class="container">
+            <!--Tab Content 1-->
+            <div id="tab-1-content" class="tab-content-item show">
+                <div class="tab-1-content-inner">
+                    <div>
+                        <p class="text-lg">
+                            If you decide Netflix isn't for you - No problem. No commitment.
+                            Cancel online anytime.
+                        </p>
+                        <a href="#" class="btn btn-lg">Watch free for 30 days</a>
+                    </div>
+                    <img src="assets/tab-content-1.png" alt="">
+                </div>
+            </div>
+
+            <!-- TAB 2 CONTENT -->
+            <div id="tab-2-content" class="tab-content-item">
+                <div class="tab-2-content-top">
+                    <p class="text-lg">
+                        Watch TV shows and movies aytime, anywhere - personalized for you.
+                    </p>
+                    <a href="#" class="btn btn-lg">Watch free for 30 days</a>
+                </div>
+                <div class="tab-2-content-bottom">
+                    <div>
+                        <img src="assets/tab-content-2-1.png" alt="">
+                        <p class="text-md">Watch on your TV</p>
+                        <p class="text-dark">Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players and
+                            more.</p>
+                    </div>
+                    <div>
+                        <img src="assets/tab-content-2-2.png" alt="">
+                        <p class="text-md">Watch instantly or download for later</p>
+                        <p class="text-dark">Avaiable on phone and tablet, wherever you go.</p>
+                    </div>
+                    <div>
+                        <img src="assets/tab-content-2-3.png" alt="">
+                        <p class="text-md">Use any computer</p>
+                        <p class="text-dark">Watch right on Netflix.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3 CONTENT -->
+            <div id="tab-3-content" class="tab-content-item">
+                <div class="text-center">
+                    <p class="text-lg">Choose one plan and watch everything on Netflix</p>
+                    <a href="#" class="btn btn-lg">Watch free for 30 days.</a>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Basic</th>
+                            <th>Standard</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly price after 30 days trial ends</td>
+                            <td>$8.99</td>
+                            <td>$12.99</td>
+                            <td>$15.99</td>
+                        </tr>
+                        <tr>
+                            <td>HD Avaiable</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Ultra HD Avaiable</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Screens you can watch on at the same time</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Watch on your laptop, TV, phone and tablet</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Unlimited movies and TV shows</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Cancel anytime</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>First month free</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
-        <center>
-            <p class="footer-text">Made By Dimas</p>
-        </center>
+        <p>Have a questions? Call 1-865-579-7172</p>
+        <div class="footer-cols">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Ways To Watch</a></li>
+                <li><a href="#">Corporate Information</a></li>
+                <li><a href="#">Netflix Originals</a></li>
+                <p class="bold">This is a personal project by Dimasdhito. No Copyright intended</p>
+            </ul>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Redeem Gift Cards</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Speed Test</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Buy Gift Cards</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Legal Notices</a></li>
+            </ul>
+        </div>
     </footer>
-    <script src="./js/script.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,347 +1,390 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0em 2em;
-    border-bottom: 1px solid darkblue
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --darker-color: #999;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Courier New', monospace;
+    font-family: 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: var(--darker-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #ffff;
+}
+
+a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
     width: 100%;
-    margin-right: -50px;
 }
 
-/* Nav */
-.nav {
-    margin-bottom: 25px;
-    display: flex;
+.showcase {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url('../assets/Netflix-Background.jpg') no-repeat center center/cover;
 }
 
-.nav-logo img {
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-bottom: 45px;
-    max-height: 40px;
-    scale: 150%;
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 120px 100px 200px #000000;
 }
 
-.nav-item {
-    padding: 2px 1em;
-    color: black;
-    border: 0.5px solid black;
-    min-width: 100px;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 25px;
-    margin-bottom: 10px;
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
 }
 
-.nav-item:hover {
-    background: rgb(245, 241, 110);
-    color: white;
-    box-shadow: 0 4px 8px 0 rgb(255, 255, 0);
-    transition: 0.2s;
-}
-
-/* Banner & Greetings */
-.greetings {
-    color: white;
+.showcase-top img {
+    width: 170px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 
-.greetings h1 {
-    font-size: 50px;
-    margin: 0 0 2rem;
-    line-height: 1.0;
-}
-
-.greetings h3 {
-    font-size: 25px;
-    margin: 0 0 2rem;
-    line-height: 0.1;
-}
-
-.banner {
-    border-bottom: 1px solid black;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("../assets/s.jpg") no-repeat center center/cover;
-    height: 578px;
-}
-
-/* About */
-.about {
-    border-bottom: 1px solid black;
-    padding: 4em;
-    display: flex;
-    width: 95.5%;
-}
-
-.about-content {
-    margin-left: 10px;
-    margin-right: 20px;
+.showcase-top a {
+    position: absolute;
     top: 50%;
-    transform: translateY(10%);
+    right: 0;
+    transform: translate(-50%, -50%);
 }
 
-.about h1 {
-    font-size: 40px;
-    margin-left: 15px;
-    margin-bottom: -5px;
-    color: rgb(245, 241, 110);
-    background-color: black;
-    width: 55%;
-}
-
-.about p {
-    font-size: 20px;
-    margin-left: 15px;
-    margin-right: 50px;
-    text-align: justify;
-}
-
-.about img {
-    height: 500px;
-    width: 700px;
-    float: right;
-    margin-right: -24px;
-    margin-top: -64px;
-    margin-bottom: -63.5px;
-}
-
-/* Headquarters */
-.headquarters {
-    border-bottom: 1px solid black;
-    padding: 4em;
-    background: rgba(211, 211, 211, 0.3);
-}
-
-.headquarters h1 {
-    font-size: 40px;
-    margin-left: 15px;
-    margin-bottom: -5px;
-    color: rgb(245, 241, 110);
-    background-color: black;
-    width: 55%;
-}
-
-.headquarters h3 {
-    margin: 20px 0;
-    margin-left: 15px;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.headquarters p {
-    margin-left: 50px;
-    font-size: 25px;
-}
-
-.hq-items {
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    margin: auto;
     display: flex;
-    padding: 2em 5em;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-
-.hq-item {
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 50px;
-    padding: 5rem;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin: 20px;
+    margin-top: 9rem;
 }
 
-.hq-item:hover {
-    box-shadow: 0 4px 8px 0 rgb(255, 255, 0);
-    transition: 0.5s;
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
 }
 
-.headquarters p {
-    margin: 20px 0;
-    font-weight: bold;
+.showcase-content p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
 }
 
-.circle-jkt {
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    border-radius: 50%;
-    background: url("../assets/Jakarta_Skyline_Part_2.jpg") no-repeat center center/cover;
+/* Tabs */
+.tabs {
+    background-color: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
 }
 
-.circle-bdg {
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    border-radius: 50%;
-    background: url("../assets/gesat-2.jpg") no-repeat center center/cover;
-}
-
-.circle-sby {
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    border-radius: 50%;
-    background: url("../assets/surabayathumb.jpg") no-repeat center center/cover;
-}
-
-/* Portfolio */
-.portfolio {
-    border-bottom: 1px solid black;
-    padding: 4em;
-}
-
-.porto-items {
-    display: flex;
-    padding: 2em 5em;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-
-.porto-item {
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 10px;
-    padding: 5rem;
+.tabs .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: 20px;
 }
 
-.porto-item:hover {
-    box-shadow: 0 4px 8px 0 rgb(255, 255, 0);
-    transition: 0.5s;
+.tabs p {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
 }
 
-.portfolio h1 {
-    font-size: 40px;
-    margin-left: 15px;
-    margin-bottom: 20px;
-    color: rgb(245, 241, 110);
-    background-color: black;
-    width: 55%;
+.tabs .container>div {
+    padding: 1.5rem 0;
 }
 
-.portfolio h3 {
-    margin: 20px 0;
-    margin-left: 15px;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.portfolio p {
-    margin: 20px 0;
-    font-size: 25px;
-    width: 500px;
-}
-
-.project1 {
-    height: 250px;
-    width: 500px;
-    border: 1px solid black;
-    border-radius: 15px;
-    background: url("../assets/portfolio-netflix.png") no-repeat center center/cover;
-}
-
-.project2 {
-    height: 250px;
-    width: 500px;
-    border: 1px solid black;
-    border-radius: 15px;
-    background: url("../assets/portfolio-porto.png") no-repeat center center/cover;
-}
-
-
-
-/* Form */
-.form {
-    border-bottom: 1px solid black;
-    padding: 4em;
-}
-
-input[type=text],
-input[type=date],
-input[type=radio],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    box-sizing: border-box;
-    resize: vertical;
-}
-
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-}
-
-input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+.tabs .container>div:hover {
+    color: #fff;
     cursor: pointer;
-    float: right;
 }
+
+.tab-border {
+    border-bottom: var(--primary-color) 4px solid;
+}
+
+/* Tab Content */
+.tab-content {
+    padding: 3rem 0;
+    background: #000;
+    color: #fff;
+}
+
+/* Hide Content Initially */
+
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+#tab-1-content .tab-1-content-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#tab-2-content .tab-2-content-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#tab-2-content .tab-2-content-bottom {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    padding: 0.8rem;
+}
+
+.table tbody tr td {
+    color: var(--darker-color);
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+
+.table tbody tr td:first-child {
+    text-align: left;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #222;
+}
+
+/* Footer */
+
+.footer {
+    max-width: 75%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+.footer,
+.footer a {
+    color: var(--darker-color);
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li {
+    line-height: 1.9;
+}
+
+.bold {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Container */
 
 .container {
-    display: flex;
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+/* Text Styles */
+
+.text-xl {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.text-md {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-dark {
+    color: var(--darker-color);
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
     border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
 }
 
-.form-input {
-    width: 850px;
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
 }
 
-.form-output {
-    margin-top: 100px;
-    margin-left: 25px;
-    width: 50%;
-    height: 50%;
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
 }
 
-.col-label {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
+.btn-icon {
+    margin-left: 1rem;
 }
 
-.col-input {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
+@media(max-width: 960px) {
+    .showcase {
+        height: 70vh;
+    }
+
+    .hide-sm {
+        display: none;
+    }
+
+    .showcase-top img {
+        top: 30%;
+        left: 5%;
+        transform: translate(0);
+    }
+
+    .showcase-content h1 {
+        font-size: 3.7rem;
+        line-height: 1;
+    }
+
+    .showcase-content p {
+        font-size: 1.5rem;
+    }
+
+    .footer .footer-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-xl {
+        font-size: 1.5rem;
+        padding: 1.4rem 2rem;
+    }
+
+    .text-xl {
+        font-size: 1.5rem;
+    }
+
+    .text-lg {
+        font-size: 1.3rem;
+    }
+
+    .text-md {
+        font-size: 1.1rem;
+    }
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+@media(max-width: 700px) {
+    .showcase::after {
+        box-shadow: inset 80px 80px 80px #000000;
+    }
 
-.footer-text {
-    color: blue;
-    font-size: small;
-    float: right;
-    margin-right: 25px;
-}
+    #tab-1-content .tab-1-content-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+    #tab-2-content .tab-2-content-top {
+        display: block;
+        text-align: center;
+    }
 
-    .col-label,
-    .col-input,
-    input[type=submit] {
-        width: 100%;
-        margin-top: 0;
+    #tab-2-content .tab-2-content-bottom {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        text-align: center;
     }
 }
